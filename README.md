@@ -17,4 +17,5 @@ Gli strumenti utilizzati per lo sviluppo sono:
 In questa repository è possibile trovare una breve presentazione e il file pdf che descrive l'applicazione web in dettaglio
 
 ## Preview dell'applicazione
-![](tesigif.gif)
+
+<img src="https://github.com/EnricoCollini/TesiWebApp/blob/master/tesigif.gif">
