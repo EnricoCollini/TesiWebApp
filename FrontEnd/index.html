@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tesi</title>
+    <meta name="description" content="">
+    <meta name="author" content="Enrico Collini">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="javascript/modal.js"></script>
+    <script src="javascript/marker.js"></script>
+    <script type="text/javascript" src="javascript/jDBSCAN.js"></script>
+
+</head>
+
+
+<body onload="showModal();getDbDatas();">
+    <div id="nav">
+        EventPlanner
+    </div>
+
+    <div id="mapid"></div>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>Welcome! Which type of event do you want to program?</p>
+            <button class="Tbutton" type="button" id='pos' onclick="closeModal('theater')">Opera</button>
+            <button class="Cbutton" type="button" id='pos' onclick="closeModal('comedy')">Comedy</button>
+            <button class="MMbutton" type="button" id='pos' onclick="closeModal('concert')">Music</button>
+            <button class="Sbutton" type="button" id='pos' onclick="closeModal('sports')">Sport</button>
+        </div>
+
+    </div>
+    <div id="navb">
+        <button class="Tbutton" type="button" onclick="addMarker('theater')">Opera</button>
+        <button class="Cbutton" type="button" onclick="addMarker('comedy')">Comedy</button>
+        <button class="MMbutton" type="button" onclick="addMarker('concert')">Music</button>
+        <button class="Sbutton" type="button" onclick="addMarker('sports')">Sport</button>
+    </div>
+    <div id="navb1">
+        <p>EventPlanner</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="javascript/mappa.js"></script>
+    <script src="javascript/modal.js"></script>
+</body>
+
+</html>

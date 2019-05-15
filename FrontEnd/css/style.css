@@ -1,0 +1,282 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,500,300italic,500italic,700italic,900,300);
+
+#body {
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+    font-family: "Roboto";
+    line-height: 1.6;
+
+}
+
+#mapid { 
+    height: 100%;
+    width: 100%;
+    position: relative;
+    font-family: "Roboto";
+}
+
+#navb {
+    position: absolute;
+    top: 10px;
+    left: 10;
+    z-index: 9;
+    visibility: hidden;
+    font-family: "Roboto";
+}
+#navb1 {
+    position: absolute;
+    top: 14px;
+    width: 110px;
+    background-color:#FBBC05;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    right: 20;
+    z-index: 9;
+    font-family: "Roboto";
+}
+
+#classe{
+
+}
+
+#bottone {
+    margin: 10 10 10 10;
+    font-family: "Roboto";
+}
+
+#pos {
+    margin: 16 20 16 20 ;
+}
+
+p {
+    font-size: 16;
+    font-family: "Roboto";
+}
+
+div {
+    font-family: "Roboto";
+}
+
+
+
+.Tbutton {
+    padding: 14px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4285F4;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px #999;
+}
+
+.Tbutton:hover {background-color: blue}
+
+.Tbutton:active {
+    background-color: #4285F4;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.Mbutton {
+    padding: 14px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #FBBC05;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px #999;
+}
+.MMbutton {
+    padding: 14px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #EA4335;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px #999;
+}
+
+.MMbutton:hover {background-color: red}
+
+.MMbutton:active {
+    background-color: yellow;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.Sbutton {
+    padding: 14px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #292F33;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px #999;
+}
+
+.Sbutton:hover {background-color: black}
+
+.Sbutton:active {
+    background-color: #292F33;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.Cbutton {
+    padding: 14px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #34A853;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px #999;
+}
+
+.Cbutton:hover {background-color: green}
+
+.Cbutton:active {
+    background-color: green;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+button {
+    padding: 14px;
+    padding-bottom:12px;
+    margin-top: 4;
+    font-family: "Roboto";
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4285F4;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 6px #999;
+}
+
+button:hover {background-color: blue}
+
+button:active {
+    background-color: #4285F4;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/**
+* 1. The `reverse` animation direction plays the animation backwards
+*    which makes it start at the stroke offset 100 which means displaying
+*    no stroke at all and animating it to the value defined in the SVG
+*    via the inline `stroke-dashoffset` attribute.
+* 2. Rotate by -90 degree to make the starting point of the
+*    stroke the top of the circle.
+* 3. Using CSS transforms on SVG elements is not supported by Internet Explorer
+*    and Edge, use the transform attribute directly on the SVG element as a
+* .  workaround (https://markus.oberlehner.net/blog/pure-css-animated-svg-circle-chart/#part-4-internet-explorer-strikes-back).
+*/
+.circle-chart__circle {
+    animation: circle-chart-fill 2s reverse; /* 1 */ 
+    transform: rotate(-90deg); /* 2, 3 */
+    transform-origin: center; /* 4 */
+}
+
+/**
+* 1. Rotate by -90 degree to make the starting point of the
+*    stroke the top of the circle.
+* 2. Scaling mirrors the circle to make the stroke move right
+*    to mark a positive chart value.
+* 3. Using CSS transforms on SVG elements is not supported by Internet Explorer
+*    and Edge, use the transform attribute directly on the SVG element as a
+* .  workaround (https://markus.oberlehner.net/blog/pure-css-animated-svg-circle-chart/#part-4-internet-explorer-strikes-back).
+*/
+.circle-chart__circle--negative {
+    transform: rotate(-90deg) scale(1,-1); /* 1, 2, 3 */
+}
+
+.circle-chart__info {
+    animation: circle-chart-appear 2s forwards;
+    opacity: 0;
+    transform: translateY(0.3em);
+}
+
+@keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.circle-chart {
+    margin-top:20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .leaflet-popup-scrolled {
+        width: auto;
+    }
+}
+
+#scroll {
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+#nav {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #navb1{
+        visibility: hidden;
+    }
+    
+    #navb{
+        margin-top: 36px;
+    }
+    #mapid { 
+    height: 94%;
+    width: 100%;
+    position: relative;
+    font-family: "Roboto";
+}
+
+    #nav{
+        display: block;
+        background-color:#FBBC05;
+        text-align: center;
+        border-radius: 1px;
+        padding-top: 8px;
+        height: 30px;
+        z-index: 9;
+        font-family: "Roboto";
+    }
+}
